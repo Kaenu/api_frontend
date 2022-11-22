@@ -15,6 +15,7 @@
 	header("Content-Type: application/json");
 
 	$app = AppFactory::create();
+	$app->setBasePath("/api_frontend/API/V1");
 
 	/**
 	 * @OA\Post(
