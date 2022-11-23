@@ -3,15 +3,18 @@
     $current_page = "prodcuts";
     require_once "view/navigation.php";
     ?>
+    <h1>Produkt erstellen</h1>
+    <form onsubmit="clickToScuess(event);">
+    <div class="field">
+        <button type="submit">Produkt bearbeiten</button>
+    </div>
 
-<form onsubmit="clickToScuess(event);">
-<h1>Produkt erstellen</h1>
-<div class="field">
+    <div class="field">
 		<label for="category-select">Kategorie-ID</label>
 		<select id="category-select">
-			<option value="">auswählen</option>
-		</select>
-	</div>
+            <option value="">auswählen</option>
+        </select>
+    </div>
     
     <div class="field">
 		<label for="name-field">Produktname</label>

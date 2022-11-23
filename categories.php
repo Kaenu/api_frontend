@@ -5,6 +5,10 @@
     ?>
     <h1>Kategorie erstellen</h1>
 
+    <div class="field">
+		<button type="submit">Kategorie bearbeiten</button>
+	</div>
+    
     <form onsubmit="clickToScuess(event);">
 	<div class="field">
 		<label for="name-field">Kategorie-Name:</label>
