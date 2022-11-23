@@ -1,15 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php $page_title = "Produkte"; ?>
     <?php
     $current_page = "prodcuts";
     require_once "view/navigation.php";
     ?>
-</body>
-</html>
+
+<form onsubmit="clickToScuess(event);">
+<h1>Produkt erstellen</h1>
+<div class="field">
+		<label for="category-select">Kategorie-ID</label>
+		<select id="category-select">
+			<option value="">auswählen</option>
+		</select>
+	</div>
+    
+    <div class="field">
+		<label for="name-field">Produktname</label>
+		<input type="text" id="name-field" required>
+	</div>
+
+	<div class="field">
+		<label for="sku-field">SKU</label>
+		<input type="text" id="sku-field" required>
+	</div>
+
+	<div class="field">
+		<input type="checkbox" id="active-checkbox">
+		<label for="active-checkbox">Active</label>
+	</div>
+
+	<div class="field">
+		<label for="image-field">Bild-URL</label>
+		<input type="text" id="image-field">
+	</div>
+
+	<div class="field">
+		<label for="price-field">Preis</label>
+		<input type="number" id="price-field" min="0" required step=".01">
+	</div>
+
+	<div class="field">
+		<label for="stock-field">Lager</label>
+		<input type="number" id="stock-field" min="0" required>
+	</div>
+
+	<div class="field">
+		<button type="submit">Speichern</button>
+	</div>
+</form>
+
+    <?php require "view/end.php"; ?>

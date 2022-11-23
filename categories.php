@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
+<?php $page_title = "Kategorie"; ?>
+<?php
     $current_page = "products";
     require_once "view/navigation.php";
     ?>
-</body>
-</html>
+    <h1>Kategorie erstellen</h1>
+
+    <form onsubmit="clickToScuess(event);">
+	<div class="field">
+		<label for="name-field">Kategorie-Name:</label>
+		<input type="text" id="name-field" required>
+	</div>
+
+	<div class="field">
+		<input type="checkbox" id="active-checkbox">
+		<label for="active-checkbox">Aktiv</label>
+	</div>
+
+	<div class="field">
+		<button type="submit">Speichern</button>
+	</div>
+</form>
+    <?php require "view/end.php"; ?>
