@@ -1,5 +1,11 @@
-<?php $page_title = "Logout"; ?>
-<?php require "view/navigation.php"; ?>
-<h1></h1>
-<script src=""></script>
-    <?php require "view/end.php"; ?>
+<?php
+// Unset all of the session variables.
+unset($_SESSION['username'], $_SESSION['password']);
+
+// destroy the session.    
+session_destroy();
+
+// Include URL for Login page to login again.
+header("Location: index.php");
+exit;
+?>

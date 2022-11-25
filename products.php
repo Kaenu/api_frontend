@@ -1,22 +1,20 @@
 <?php $page_title = "Produkte"; ?>
-    <?php
+<?php
     $current_page = "prodcuts";
     require_once "view/navigation.php";
     ?>
-    <h1>Produkt erstellen</h1>
-    <form onsubmit="clickToScuess(event);">
-    <div class="field">
-        <button type="submit">Produkt bearbeiten</button>
-    </div>
+<h1>Produkt erstellen</h1>
+<a href="product.php"><button class="edit-prod" id="edit-product">Produkt bearbeiten</button></a>
 
-    <div class="field">
+<form onsubmit="clickToScuess(event);">
+	<div class="field">
 		<label for="category-select">Kategorie-ID</label>
 		<select id="category-select">
-            <option value="">auswählen</option>
-        </select>
-    </div>
-    
-    <div class="field">
+			<option value="">auswählen</option>
+		</select>
+	</div>
+
+	<div class="field">
 		<label for="name-field">Produktname</label>
 		<input type="text" id="name-field" required>
 	</div>
@@ -50,5 +48,5 @@
 		<button type="submit">Speichern</button>
 	</div>
 </form>
-
-    <?php require "view/end.php"; ?>
+<script src="controller/products.js"></script>
+<?php require "view/end.php"; ?>
